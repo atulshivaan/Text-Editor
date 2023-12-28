@@ -1,0 +1,46 @@
+.container {
+   
+    width: 100%;
+    margin-top: 20%;
+}
+
+.navbar{
+    height: 90px;
+    background: #1a1a1a;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.click{
+    font-weight: 500;
+    padding: 12px 22px;
+    background: transparent;
+    color: #99999999;
+    border-radius: 10px;
+    border: 2px solid #0aa5ff;
+    transition: 0.2s;
+}
+.click:hover{
+    background: #0aa5ff;
+    color: white;
+}
+
+
+div{
+    height: 50px;
+   
+    border: 2px outset black;
+    background-color: rgb(80, 103, 110);    
+   
+}
+
+body{
+    background: rgb(34, 33, 33);
+    
+}
+
+
+
+
+
