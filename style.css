@@ -9,10 +9,19 @@
     background: #1a1a1a;
     padding: 20px 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
 }
+img{
+    padding: auto;
+    width: 50px;
+    height: 50%;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: 2px solid #0aa5ff;
+}
 .click{
+    
     font-weight: 500;
     padding: 12px 22px;
     background: transparent;
@@ -37,7 +46,20 @@ div{
 
 body{
     background: rgb(34, 33, 33);
-    
+    border-radius: 10px;
+    border: 2px solid #0aa5ff;
+}
+footer{
+    border-radius: 10px;
+    border: 2px solid #0aa5ff;
+    background: transparent;
+    background-color:black;
+    color: white;
+    text-align: right;
+    padding: 2px;
+}
+footer.a{
+    color: #0aa5ff;
 }
 
 

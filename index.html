@@ -11,15 +11,15 @@
         <header>
             <nav>
                 <div class="navbar">
-                       
-                      <button class="click">Undo 
-                        <i class="fa-solid-fa-bars"></i>
+                       <img src="1.png" alt="logo">
+                      <button class="click" id="btn1">Undo 
+                        <i class="fa-solid fa-bars"></i>
                       </button>
                      ]
                         
                      
-                      <button class="click">redo 
-                        <i class="fa-solid-fa-bars"></i>
+                      <button class="click" id="btn2">redo 
+                        <i class="fa-solid fa-bars"></i>
                       </button>
                       
                       
@@ -33,13 +33,13 @@
                 
                            
                
-                    <form id="textEditorForm">
+                    <form id="textEditorinputForm">
                         <label for="textInput" style="-webkit-text-stroke-width: thin; text-color:white">Enter Text:</label>
                         <br>
                         <textarea  style=" width: 509px; border-radius: 10px;
                         border: 2px solid #0aa5ff;"  id="textInput" name="textInput" rows="4" placeholder="Type your text here..."></textarea>
                     </form>
-                    <form id="textEditorForm">
+                    <form id="textEditoroutputForm">
                         <label for="textOutput">updated Text</label>
                         <br>
                         <textarea style=" width: 509px;
@@ -63,7 +63,7 @@
                         <option value="Times New Roman, serif">Times New Roman</option>
                         <option value="Courier New, monospace">Courier New</option>
                         <option value="Verdana, sans-serif">Verdana</option>
-                        <option value="Georgia, serif">Georgia</optio>
+                        <option value="Georgia, serif">Georgia</option>
                         <option value="Palatino Linotype, Book Antiqua, Palatino, serif">Palatino Linotype</option>
                         <option value="Tahoma, Geneva, sans-serif">Tahoma</option>
                         <option value="Trebuchet MS, sans-serif">Trebuchet MS</option>
@@ -84,8 +84,46 @@
                 </form>
                 
             </div>
+
+            <footer>
+                <p>Connect with me on LinkedIn: <a href="https://www.linkedin.com/in/atul-kumar-459029235/" target="https://www.linkedin.com/in/atul-kumar-459029235/">@atulshivaan</a></p>
+            </footer>
         
         
         <script src="script.js"></script>
+        <script>
+            function updateText() {
+                            var selectedFont = document.getElementById("fontFamily").value;
+                            var selectedFontSize = document.getElementById("fontSize").value + "px";
+                            var selectedFontColor = document.getElementById("fontColor").value;
+                            var inputText = document.getElementById("textInput").value;
+                            var outputTextarea = document.getElementById("textOutput");
+                
+                            outputTextarea.style.fontFamily = selectedFont;
+                            outputTextarea.style.fontSize = selectedFontSize;
+                            outputTextarea.style.color = selectedFontColor;
+                            outputTextarea.value = inputText;
+                            var inputText = document.getElementById("textInput").value;
+                            
+                
+                            
+            
+                        }
+                          
+            
+                        const textarea = document.getElementById('textInput');
+                const undoButton = document.getElementById('btn1');
+                const redoButton = document.getElementById('btn2');
+                undoButton.addEventListener('click', function handleUndoClick() {
+                    textarea.value = ''; // Clear the text in the textarea
+                });
+                redoButton.addEventListener('click', function handleRedoClick() {
+                    const currentText = textarea.value;
+                    if (currentText.length > 0) {
+                        textarea.value = currentText.slice(0, -1); // Remove the last character
+                    }
+                });
+            
+                    </script>
     </body>
     </html>
